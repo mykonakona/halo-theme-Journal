@@ -3,7 +3,7 @@
     <div class="drawer-content">
         <div class="drawer-menu">
             <@menuTag method="list">
-            <#list menus as menu>
+            <#list menus?sort_by('priority') as menu>
                 <a class="a-block drawer-menu-item" href="${menu.url!}" target="${menu.target!}">
                     ${menu.name!}
                 </a>

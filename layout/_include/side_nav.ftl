@@ -11,7 +11,7 @@
     <div class="nav-link-list">
 
         <@menuTag method="list">
-            <#list menus as menu>
+            <#list menus?sort_by('priority') as menu>
                 <a class="a-block nav-link-item" href="${menu.url}" target="${menu.target!}">
                     ${menu.name!}
                 </a>
