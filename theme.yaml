@@ -1,0 +1,10 @@
+id: SumiMakito_Journal
+name: Journal
+author:
+  name: SumiMakito
+  website: https://keep.moe
+description:
+logo:
+website: https://github.com/SumiMakito/hexo-theme-journal
+repo: https://github.com/halo-dev/halo-theme-journal
+version: 2.0.3

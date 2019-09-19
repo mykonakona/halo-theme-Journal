@@ -1,0 +1,23 @@
+general:
+  label: 基本设置
+  items:
+    sidebar_title:
+      name: sidebar_title
+      label: 侧边栏标题
+      type: text
+      placeholder: '会覆盖博客本身的标题，可不填'
+    sidebar_subtitle:
+      name: sidebar_subtitle
+      label: 侧边栏副标题
+      type: text
+    sidebar_rss:
+      name: sidebar_rss
+      label: 侧边栏 RSS 按钮
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 显示
+        - value: false
+          label: 隐藏
