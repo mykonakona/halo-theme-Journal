@@ -1,10 +1,10 @@
 <#include "layout/_include/head.ftl">
+<@head title="${post.title!} - ${options.blog_title!}" keywords="${post.title!},${options.seo_keywords!},${tagWords!}" description="${post.summary!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
 <#include "layout/_include/extra_nav.ftl">
 <@extra_nav false ''/>
-<@head title="${post.title!} - ${options.blog_title!}" keywords="${post.title!},${options.seo_keywords!},${tagWords!}" description="${post.summary!}"></@head>
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         <div class="post">

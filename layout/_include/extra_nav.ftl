@@ -18,7 +18,7 @@
 
             <#if posts.hasPrevious()>
                 <#if posts.number == 1>
-                    <a class="pagination-action" href="$${url}">
+                    <a class="pagination-action" href="${url}">
                 <#else>
                     <a class="pagination-action" href="${url}page/${posts.number}">
                 </#if>

@@ -1,10 +1,10 @@
 <#include "layout/_include/head.ftl">
+<@head title="${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" />
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
 <#include "layout/_include/extra_nav.ftl">
 <@extra_nav true '${context!}/'/>
-<@head title="${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" />
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-no-background">
         <#list posts.content as post>
