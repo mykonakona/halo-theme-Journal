@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="${static!}/source/css/journal.css">
     <@global.head />
     <script src="${static!}/source/js/loadCSS.js"></script>
+
+    <!-- Import prettify css  -->
+    <#if settings.prettify_enable!false>
+        <#if is_post?? || is_sheet??>
+            <link rel="stylesheet" href="${static!}/source/css/prettify.min.css">
+            <link rel="stylesheet" href="${static!}/source/css/prettify/${settings.prettify_theme!}.min.css">
+        </#if>
+    </#if>
+
     <script>
         loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
         (function (d) {

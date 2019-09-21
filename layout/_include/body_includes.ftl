@@ -9,3 +9,16 @@
 <script src="//cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
 <script src="${static!}/source/js/journal.js"></script>
+
+<!-- Import prettify js  -->
+<#if settings.prettify_enable!false>
+    <#if is_post?? || is_sheet??>
+        <script src="${static!}/source/js/prettify.min.js"></script>
+        <script>
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+            })
+        </script>
+    </#if>
+</#if>
