@@ -49,28 +49,6 @@
     </script>
     <@global.statistics />
 
-    <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
-
-    <script>
-        var pjax = new Pjax({
-            elements: 'a[href]:not([href^="#"])',
-            cacheBust: false,
-            debug: false,
-            selectors: [
-                'title',
-                '.wrapper'
-            ]
-        });
-        document.addEventListener('pjax:send', function () {
-            NProgress.start();
-        });
-        document.addEventListener('pjax:complete', function () {
-            NProgress.done();
-
-        });
-    </script>
-
     <noscript>
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
     </noscript>
