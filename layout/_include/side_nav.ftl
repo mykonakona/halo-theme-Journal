@@ -1,5 +1,5 @@
 <div ref="sideContainer" class="side-container">
-    <a class="a-block nav-head" href="${context!}">
+    <a class="a-block nav-head <#if is_index??>active</#if>" href="${context!}">
         <div class="nav-title">
             ${(settings.sidebar_title?? && settings.sidebar_title!='')?string('${settings.sidebar_title!}','${options.blog_title!}')}
         </div>

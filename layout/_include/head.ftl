@@ -16,7 +16,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="${static!}/source/css/journal.css">
+    <link rel="stylesheet" href="${static!}/source/css/journal.min.css">
     <@global.head />
     <script src="${static!}/source/js/loadCSS.js"></script>
 

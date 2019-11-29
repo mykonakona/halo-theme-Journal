@@ -530,7 +530,7 @@ a {
   max-width: $stream-container-max-width;
 
   @media screen and (max-width: $single-column-max-width) {
-    padding: 0;
+    padding: 20px;
     min-height: unset;
   }
 
