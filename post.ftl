@@ -35,7 +35,7 @@
             </div>
 
             <div class="post-body-wrapper">
-                <div class="post-body">
+                <div class="post-body" v-pre>
                     ${post.formatContent!}
                 </div>
             </div>
