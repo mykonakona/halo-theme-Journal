@@ -8,7 +8,8 @@
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         <div class="post">
-            <div class="<#if post.thumbnail?? && post.thumbnail!=''>post-head-wrapper<#else>post-head-wrapper-text-only</#if>" style="background-image: url('${post.thumbnail!}')">
+            <div <#if post.thumbnail?? && post.thumbnail!=''>class="post-head-wrapper" style="background-image: url('${post.thumbnail!}')"
+                 <#else>class="post-head-wrapper-text-only"</#if>>
                 <div class="post-title">
                     ${post.title!}
                     <div class="post-meta">
