@@ -30,7 +30,7 @@
 
     <script>
         loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
-        (function (d) {
+        <#--  (function (d) {
             var config = {
                     kitId: 'dwg1tuc',
                     scriptTimeout: 3000,
@@ -54,7 +54,7 @@
                 }
             };
             s.parentNode.insertBefore(tk, s)
-        })(document);
+        })(document);  -->
     </script>
     <@global.statistics />
 
