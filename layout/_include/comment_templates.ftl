@@ -5,7 +5,7 @@
     </p>
     <#else>
     <div class="post-comment-wrapper">
-        <halo-comment id="${post.id}" type="${type}"/>
+        <halo-comment id="${post.id?c}" type="${type}"/>
     </div>
     </#if>
 </#macro>
