@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" />
+<@head title="${blog_title!}"/>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
@@ -8,7 +8,7 @@
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-no-background">
         <#list posts.content as post>
-        <a href="${context!}/archives/${post.url!}" class="a-block">
+        <a href="${post.fullPath!}" class="a-block">
             <div class="post-item-wrapper">
                 <div class="post-item post-item-no-divider">
                     <div class="post-item-info-wrapper">

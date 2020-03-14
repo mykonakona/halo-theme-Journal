@@ -1,4 +1,4 @@
-<#macro head title,keywords,description>
+<#macro head title>
 <!DOCTYPE html>
 <html lang="zh" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="${user.nickname!}">
-    <meta name="description" content="${description!}">
-    <meta name="keywords" content="${keywords!}">
-    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="${context!}/atom.xml">
+    <meta name="description" content="${meta_description!}">
+    <meta name="keywords" content="${meta_keywords!}">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="${atom_url!}">
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -16,20 +16,20 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="${static!}/source/css/journal.min.css">
+    <link rel="stylesheet" href="${theme_base!}/source/css/journal.min.css">
     <@global.head />
-    <script src="${static!}/source/js/loadCSS.js"></script>
+    <script src="${theme_base!}/source/js/loadCSS.js"></script>
 
     <!-- Import prettify css  -->
     <#if settings.prettify_enable!false>
         <#if is_post?? || is_sheet??>
-            <link rel="stylesheet" href="${static!}/source/css/prettify.min.css">
-            <link rel="stylesheet" href="${static!}/source/css/prettify/${settings.prettify_theme!}.min.css">
+            <link rel="stylesheet" href="${theme_base!}/source/css/prettify.min.css">
+            <link rel="stylesheet" href="${theme_base!}/source/css/prettify/${settings.prettify_theme!}.min.css">
         </#if>
     </#if>
 
     <script>
-        loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+        loadCSS("https://fonts.loli.net/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
         <#--  (function (d) {
             var config = {
                     kitId: 'dwg1tuc',

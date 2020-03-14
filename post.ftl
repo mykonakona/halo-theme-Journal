@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="${post.title!} - ${options.blog_title!}" keywords="${post.title!},${options.seo_keywords!},${tagWords!}" description="${post.summary!}"></@head>
+<@head title="${post.title!} - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">

@@ -11,7 +11,7 @@
             </@menuTag>
 
             <#if settings.sidebar_rss!true>
-            <a class="a-block drawer-menu-item" href="${context!}/atom.xml">
+            <a class="a-block drawer-menu-item" href="${atom_url!}">
                 RSS
             </a>
             </#if>
@@ -29,15 +29,15 @@
                 menu
             </i>
         </button>
-        <a ref="navTitle" class="navbar-brand" href="${context!}">
-            ${options.blog_title!}
+        <a ref="navTitle" class="navbar-brand" href="${blog_url!}">
+            ${blog_title!}
         </a>
     </div>
 </nav>
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="${context!}">
-        <div class="single-column-header-title">${options.blog_title!}</div>
+    <a href="${blog_url!}">
+        <div class="single-column-header-title">${blog_title!}</div>
         <div class="single-column-header-subtitle">${user.description!}</div>
     </a>
 </div>

@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="标签: ${tag.name} - ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@head>
+<@head title="标签: ${tag.name} - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
@@ -11,13 +11,13 @@
             <div class="post-item post-item-no-gaps">
                 <div class="post-item-info-wrapper">
                     <div class="post-item-title  post-item-title-small">
-                        <a href="${context!}/tags">标签</a> / ${tag.name!}
+                        <a href="${tags_url!}">标签</a> / ${tag.name!}
                     </div>
                 </div>
             </div>
         </div>
         <#list posts.content as post>
-            <a href="${context!}/archives/${post.url!}" class="a-block">
+            <a href="${post.fullPath!}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-gaps">
                         <div class="post-item-info-wrapper">
@@ -33,7 +33,7 @@
             </a>
         </#list>
         <#include "layout/_include/pagination.ftl">
-        <@pagination url="${context!}/tags/${tag.slugName}/"></@pagination>
+        <@pagination url="${tag.fullPath!}"></@pagination>
     </div>
     <#include "layout/_include/single_column_footer.ftl">
 </div>

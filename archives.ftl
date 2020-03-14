@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="归档 - ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@head>
+<@head title="归档 - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
@@ -9,7 +9,7 @@
     <div class="post-list-container post-list-container-shadow">
 
         <#list posts.content as post>
-            <a href="${context!}/archives/${post.url!}" class="a-block">
+            <a href="${post.fullPath!}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-gaps">
                         <div class="post-item-info-wrapper">

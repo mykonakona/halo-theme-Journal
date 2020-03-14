@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="标签 - ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@head>
+<@head title="标签 - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
@@ -20,7 +20,7 @@
         </a>
         <@tagTag method="list">
             <#list tags as tag>
-                <a href="${context!}/tags/${tag.slugName!}" class="a-block">
+                <a href="${tag.fullPath!}" class="a-block">
                     <div class="post-item-wrapper">
                         <div class="post-item post-item-no-gaps">
                             <div class="post-item-info-wrapper">
