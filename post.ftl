@@ -1,5 +1,5 @@
 <#include "layout/_include/head.ftl">
-<@head title="${post.title!} - ${options.blog_title!}" keywords="${post.title!},${options.seo_keywords!},${tagWords!}" description="${post.summary!}"></@head>
+<@head title="${post.title!} - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
@@ -20,7 +20,7 @@
                             <#assign categoriesCount = categories?size />
                             <i class="material-icons" style="">folder</i>
                             <#list categories as category>
-                                <a href='${context!}/categories/${category.slugName!}'>${category.name!}</a>${(categoriesCount != category_index+1)?string(', ','')}
+                                <a href='${category.fullPath!}'>${category.name!}</a>${(categoriesCount != category_index+1)?string(', ','')}
                             </#list>
                         </#if>
 
@@ -28,7 +28,7 @@
                             <#assign tagsCount = tags?size />
                             <i class="material-icons" style="">label</i>
                             <#list tags as tag>
-                                <a href='${context!}/tags/${tag.slugName!}'>${tag.name!}</a>${(tagsCount != tag_index+1)?string(', ','')}
+                                <a href='${tag.fullPath!}'>${tag.name!}</a>${(tagsCount != tag_index+1)?string(', ','')}
                             </#list>
                         </#if>
                     </div>

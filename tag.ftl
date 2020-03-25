@@ -1,23 +1,23 @@
 <#include "layout/_include/head.ftl">
-<@head title="标签: ${tag.name} - ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@head>
+<@head title="标签: ${tag.name} - ${blog_title!}"></@head>
 <#include "layout/_include/container_head.ftl">
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
 <#include "layout/_include/extra_nav.ftl">
-<@extra_nav true '${context!}/tags/${tag.slugName}/'/>
+<@extra_nav true '${tag.fullPath!}/'/>
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         <div class="post-item-wrapper post-item-wrapper-no-hover">
             <div class="post-item post-item-no-gaps">
                 <div class="post-item-info-wrapper">
                     <div class="post-item-title  post-item-title-small">
-                        <a href="${context!}/tags">标签</a> / ${tag.name!}
+                        <a href="${tags_url!}">标签</a> / ${tag.name!}
                     </div>
                 </div>
             </div>
         </div>
         <#list posts.content as post>
-            <a href="${context!}/archives/${post.url!}" class="a-block">
+            <a href="${post.fullPath!}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-gaps">
                         <div class="post-item-info-wrapper">
@@ -32,8 +32,11 @@
                 </div>
             </a>
         </#list>
-        <#include "layout/_include/pagination.ftl">
-        <@pagination url="${context!}/tags/${tag.slugName}/"></@pagination>
+        <#if posts?? && posts.totalPages gt 1>
+            <@paginationTag method="tagPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${tag.slug!}">
+                <#include "layout/_include/pagination.ftl">
+            </@paginationTag>
+        </#if>
     </div>
     <#include "layout/_include/single_column_footer.ftl">
 </div>
