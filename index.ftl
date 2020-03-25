@@ -4,7 +4,7 @@
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
 <#include "layout/_include/extra_nav.ftl">
-<@extra_nav true '${context!}/'/>
+<@extra_nav true '${context!}'/>
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-no-background">
         <#list posts.content as post>
@@ -31,8 +31,11 @@
             </div>
         </a>
         </#list>
-        <#include "layout/_include/pagination.ftl">
-        <@pagination url="${context!}/"></@pagination>
+        <#if posts?? && posts.totalPages gt 1>
+            <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <#include "layout/_include/pagination.ftl">
+            </@paginationTag>
+        </#if>
     </div>
     <#include "layout/_include/single_column_footer.ftl">
 </div>

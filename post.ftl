@@ -20,7 +20,7 @@
                             <#assign categoriesCount = categories?size />
                             <i class="material-icons" style="">folder</i>
                             <#list categories as category>
-                                <a href='${context!}/categories/${category.slugName!}'>${category.name!}</a>${(categoriesCount != category_index+1)?string(', ','')}
+                                <a href='${category.fullPath!}'>${category.name!}</a>${(categoriesCount != category_index+1)?string(', ','')}
                             </#list>
                         </#if>
 
@@ -28,7 +28,7 @@
                             <#assign tagsCount = tags?size />
                             <i class="material-icons" style="">label</i>
                             <#list tags as tag>
-                                <a href='${context!}/tags/${tag.slugName!}'>${tag.name!}</a>${(tagsCount != tag_index+1)?string(', ','')}
+                                <a href='${tag.fullPath!}'>${tag.name!}</a>${(tagsCount != tag_index+1)?string(', ','')}
                             </#list>
                         </#if>
                     </div>

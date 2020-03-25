@@ -4,7 +4,7 @@
 <#include "layout/_include/single_column_head.ftl">
 <#include "layout/_include/side_nav.ftl">
 <#include "layout/_include/extra_nav.ftl">
-<@extra_nav true '${context!}/tags/${tag.slugName}/'/>
+<@extra_nav true '${tag.fullPath!}/'/>
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         <div class="post-item-wrapper post-item-wrapper-no-hover">
@@ -32,8 +32,11 @@
                 </div>
             </a>
         </#list>
-        <#include "layout/_include/pagination.ftl">
-        <@pagination url="${tag.fullPath!}"></@pagination>
+        <#if posts?? && posts.totalPages gt 1>
+            <@paginationTag method="tagPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${tag.slug!}">
+                <#include "layout/_include/pagination.ftl">
+            </@paginationTag>
+        </#if>
     </div>
     <#include "layout/_include/single_column_footer.ftl">
 </div>
