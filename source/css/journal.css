@@ -181,7 +181,7 @@ a:hover {
     color: #fcfcfc;
   }
   .single-column-nav-container .navbar-brand:hover {
-    color: #917100 !important;
+    color: #ffc600 !important;
   }
   .single-column-nav-container .nav-dropdown-toggle {
     display: flex;
@@ -243,7 +243,7 @@ a:hover {
   }
   .single-column-header-container *:hover {
     font-family: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", "Arial", "Lora", "source-han-serif-tc", serif;
-    color:  #d6a600;
+    color:  #ffc600;
   } 
   .single-column-header-container .single-column-header-title {
     font-size: 28px;
