@@ -178,6 +178,10 @@ a:hover {
     opacity: 0;
     text-align: left;
     padding-left: 24px !important;
+    color: #fcfcfc;
+  }
+  .single-column-nav-container .navbar-brand:hover {
+    color: #917100 !important;
   }
   .single-column-nav-container .nav-dropdown-toggle {
     display: flex;
@@ -216,7 +220,7 @@ a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
+    background: #57697D;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -237,6 +241,10 @@ a:hover {
     font-family: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", "Arial", "Lora", "source-han-serif-tc", serif;
     color: #fcfcfc;
   }
+  .single-column-header-container *:hover {
+    font-family: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", "Arial", "Lora", "source-han-serif-tc", serif;
+    color:  #d6a600;
+  } 
   .single-column-header-container .single-column-header-title {
     font-size: 28px;
   }

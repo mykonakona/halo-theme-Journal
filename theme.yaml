@@ -1,9 +1,9 @@
-id: Journal-Nightly
-name: Journal-Nightly
+id: Journal_Nightly
+name: Journal_Nightly
 author:
   name: Jakku
-description: 'Add a night mode to halo-theme-Journal'
-website: https://github.com/mykonakona/halo-theme-Journal
-repo: https://github.com/mykonakona/halo-theme-Journal
-version: 0.1.0
+description: 'A Night Version of Journal'
+website: https://github.com/SumiMakito/hexo-theme-journal
+repo: https://github.com/mykonakona/halo-theme-Journal-Nightly
+version: 0.1.1
 require: 1.3.0
